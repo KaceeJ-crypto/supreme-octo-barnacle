@@ -1,51 +1,63 @@
 import React from 'react';
+import './App.css';
 
 function App() {
   return (
-    <div style={styles.container}>
-      <header style={styles.header}>
-        <h1 style={styles.title}>Sacred Space Foundation</h1>
+    <div className="container">
+      <header className="header">
+        <img src="/mylogo.png" alt="Sacred Space Logo" className="logo" />
+        <h1 className="title">Sacred Space Foundation</h1>
+        <nav className="nav">
+          <button>Home</button>
+          <button>Resources</button>
+          <button>Meetings</button>
+          <button>Contact</button>
+        </nav>
       </header>
 
-      <footer style={styles.footer}>
-        <p style={styles.footerText}>
-          sacredspacefoundationatlanta.org <br />
-          <em>Coming Soon</em> <br />
-          Contact admin at <strong>Kacee J</strong> — if you know, you know.
-        </p>
-      </footer>
+      <section className="section">
+        <h2>💡 Resources</h2>
+        <ul>
+          <li><a href="https://recoverydh.org/resources/recovery-guide.pdf" target="_blank" rel="noreferrer">Recovery Guide PDF</a></li>
+          <li><a href="https://988lifeline.org" target="_blank" rel="noreferrer">988 Suicide & Crisis Lifeline</a></li>
+          <li><a href="https://na.org" target="_blank" rel="noreferrer">Narcotics Anonymous</a></li>
+        </ul>
+      </section>
+
+      <section className="section">
+        <h2>📅 Weekly Meeting Schedule</h2>
+        <ul className="schedule">
+          <li><strong>Monday:</strong> 8:00 PM – Hybrid Recovery / Hearth and Home Book Study (NA) <br />4th Monday: Speaker Meeting</li>
+          <li><strong>Tuesday:</strong> 8:00 PM – No More Shadows (CMA)</li>
+          <li><strong>Wednesday:</strong> 6:30 PM – Alcoholics Anonymous: A Daily Reprieve</li>
+          <li><strong>Thursday:</strong> 8:00 PM – AA: There Is a Solution <br />
+            1st & 2nd: Big Book Study<br />
+            3rd: Tradition Study<br />
+            4th: Speaker Meeting<br />
+            5th: Grapevine Meeting
+          </li>
+          <li><strong>Saturday:</strong> 1:00 PM – Hybrid Recovery (Open Discussion)</li>
+        </ul>
+        <p><em>Events will be announced and posted on Facebook:</em></p>
+        <ul>
+          <li><a href="https://www.facebook.com/share/g/16anom2UGn/?mibextid=wwXIfr" target="_blank" rel="noreferrer">Facebook Group 1</a></li>
+          <li><a href="https://www.facebook.com/share/g/16qkUGgduW/?mibextid=wwXIfr" target="_blank" rel="noreferrer">Facebook Group 2</a></li>
+        </ul>
+      </section>
+
+<footer className="footer">
+  <p>
+    <strong>Contact:</strong> <a href="mailto:admin@sacredspacefoundationatlanta.org">admin@sacredspacefoundationatlanta.org</a><br />
+    Email <strong>Kacee J</strong>: <a href="mailto:kaceej@sacredspacefoundationatlanta.org">kaceej@sacredspacefoundationatlanta.org</a><br />
+    <small>
+      “Recovery isn’t about becoming someone new — it’s about remembering who you were before the world told you to forget.
+      Every scar is a signature of survival, and every breath is a rebellion against the silence of shame.”<br />
+      — Kacee J
+    </small>
+  </p>
+</footer>
     </div>
   );
 }
-
-const styles = {
-  container: {
-    minHeight: '100vh',
-    backgroundColor: '#fefdfb',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    fontFamily: '"Brush Script MT", cursive, sans-serif',
-    padding: '2rem',
-    textAlign: 'center',
-  },
-  header: {
-    marginTop: '2rem',
-  },
-  title: {
-    fontSize: '3.5rem',
-    color: '#4b2e83',
-  },
-  footer: {
-    marginBottom: '2rem',
-  },
-  footerText: {
-    fontSize: '1.2rem',
-    color: '#444',
-    lineHeight: '1.6',
-    fontFamily: 'Arial, sans-serif',
-  },
-};
 
 export default App;
