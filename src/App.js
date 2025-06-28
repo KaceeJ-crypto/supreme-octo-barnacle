@@ -71,6 +71,18 @@ function App() {
               <td>AA Daily Reprieve</td>
               <td>Open AA</td>
             </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>8:00 PM</td>
+              <td>There Is A Solution</td>
+              <td>Hybrid (In-person & Zoom)</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>1:00 PM</td>
+              <td>All Recovery Meeting</td>
+              <td>Hybrid (In-person & Zoom)</td>
+            </tr>
           </tbody>
         </table>
 
