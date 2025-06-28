@@ -5,34 +5,27 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1 className="title">Sacred Space Foundation</h1>
-        <p>
-          <a
-            className="zoom-link"
-            href="https://us02web.zoom.us/j/5471397255?pwd=228426"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🔗 Join Our Zoom Meeting (ID: 547 139 7255)
-          </a>
-          <br />
-          Passcode: 228426
-        </p>
+        <div className="logo-title-wrapper">
+          <img src="/mylogo.png" alt="Sacred Space Logo" className="logo" />
+          <div>
+            <h1 className="title">Sacred Space Foundation</h1>
+            <p className="pillars">Balance • Wellness • Recovery</p>
+          </div>
+        </div>
+        <nav className="nav">
+          <button>Home</button>
+          <button>Resources</button>
+          <button>Meetings</button>
+          <button>Contact</button>
+        </nav>
       </header>
-
-      <nav className="nav">
-        <button>Home</button>
-        <button>Resources</button>
-        <button>Meetings</button>
-        <button>Contact</button>
-      </nav>
 
       <section className="section">
         <h2>💡 Resources</h2>
         <ul>
           <li>
-            <a href="https://recoverydh.org/resources/recovery-guide.pdf" target="_blank" rel="noopener noreferrer">
-              Recovery Guide PDF
+            <a href="https://www.aa.org" target="_blank" rel="noopener noreferrer">
+              Alcoholics Anonymous
             </a>
           </li>
           <li>
@@ -55,7 +48,7 @@ function App() {
             <tr>
               <th>Day</th>
               <th>Time</th>
-              <th>Location</th>
+              <th>Group</th>
               <th>Type</th>
             </tr>
           </thead>
@@ -63,35 +56,45 @@ function App() {
             <tr>
               <td>Monday</td>
               <td>8:00 PM</td>
-              <td>Sacredspace Clubhouse / Zoom</td>
-              <td>Hybrid Recovery</td>
+              <td>Hearth & Home</td>
+              <td>Hybrid Book Study</td>
             </tr>
             <tr>
               <td>Tuesday</td>
-              <td>8:00 PM</td>
-              <td>No More Shadows CMA</td>
-              <td>Spiritual Growth</td>
+              <td>5:45 PM</td>
+              <td>No More Shadows</td>
+              <td>CMA</td>
             </tr>
             <tr>
               <td>Wednesday</td>
               <td>6:30 PM</td>
-              <td>Daily Reprieve - AA</td>
-              <td>In-Person</td>
-            </tr>
-            <tr>
-              <td>Thursday</td>
-              <td>8:00 PM</td>
-              <td>There is a Solution - AA</td>
-              <td>Rotating Format</td>
-            </tr>
-            <tr>
-              <td>Saturday</td>
-              <td>1:00 PM</td>
-              <td>Hybrid Recovery Meeting</td>
-              <td>Open Discussion</td>
+              <td>AA Daily Reprieve</td>
+              <td>Open AA</td>
             </tr>
           </tbody>
         </table>
+
+        <p className="calendar-link">
+          📅{' '}
+          <a
+            href="https://calendar.google.com/calendar/u/0/r?cid=sacredspacefoundationatlanta@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Full Google Calendar
+          </a>
+        </p>
+
+        <p className="newsletter">
+          📰{' '}
+          <a
+            href="https://example.com/newsletter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Subscribe to <strong>The Sacred Signal</strong> Newsletter
+          </a>
+        </p>
       </section>
 
       <section className="section">
@@ -99,20 +102,11 @@ function App() {
         <ul>
           <li>
             <a
-              href="https://www.facebook.com/share/g/16anom2UGn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook Event #1
-            </a>
-          </li>
-          <li>
-            <a
               href="https://www.facebook.com/share/g/16qkUGgduW"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Facebook Event #2
+              Facebook Community Page
             </a>
           </li>
         </ul>
@@ -121,15 +115,42 @@ function App() {
       <footer className="footer">
         <p>
           <em>
-            “Recovery isn’t about becoming someone new — it’s about remembering who you were before the world told you to forget.<br />
-            Every scar is a signature of survival, and every breath is a rebellion against the silence of shame.”<br />
-            — Kacee J
+            “Recovery isn’t about becoming someone new — it’s about remembering who you were
+            before the world told you to forget. Every scar is a signature of survival, and
+            every breath is a rebellion against the silence of shame.”<br />— Kacee J
           </em>
-          <br /><br />
-          <strong>Contact:</strong> <a href="mailto:admin@sacredspacefoundationatlanta.org">admin@sacredspacefoundationatlanta.org</a><br />
-          Email <strong>Kacee J</strong>: <a href="mailto:kaceej@sacredspacefoundationatlanta.org">kaceej@sacredspacefoundationatlanta.org</a>
+        </p>
+        <p>
+          <strong>Contact:</strong>{' '}
+          <a href="mailto:admin@sacredspacefoundationatlanta.org">
+            admin@sacredspacefoundationatlanta.org
+          </a>
+          <br />
+          <strong>Email Kacee J:</strong>{' '}
+          <a href="mailto:kaceej@sacredspacefoundationatlanta.org">
+            kaceej@sacredspacefoundationatlanta.org
+          </a>
+          <br />
+          <strong>Warmline:</strong>{' '}
+          <a href="tel:+14707814777">+1 (470) 781-4777</a>
+        </p>
+        <p className="zoom-link">
+          🔗{' '}
+          <a
+            href="https://us02web.zoom.us/j/5471397255?pwd=228426"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join Our Zoom Meeting (ID: 547 139 7255)
+          </a>
+          <br />
+          Passcode: 228426
         </p>
       </footer>
+
+      <div className="bottom-logo">
+        <img src="/mylogo2.png" alt="Sacred Space Bottom Logo" />
+      </div>
     </div>
   );
 }
