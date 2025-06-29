@@ -1,65 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
+/* Global Base */
 body {
   margin: 0;
-  font-family: 'Share Tech Mono', monospace;
-  background: #0b0d11;
-  color: #f0f0f0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0d0d0d;
+  color: #39ff14;
+  overflow-x: hidden;
 }
 
+a {
+  color: #39ff14;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main Console Layout */
 .console-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 40px 20px;
 }
 
+/* Header with glitch animation */
 .neon-title {
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #39ff14;
+  animation: flicker 2s infinite alternate;
+  position: relative;
 }
 
-.neon-title h1 {
-  font-size: 4rem;
-  color: #ff0055;
-  text-shadow: 0 0 8px #ff0055, 0 0 25px #ff00c8;
-  animation: flicker 3s infinite alternate;
+.animated-glitch h1 {
+  animation: glitch 1s infinite;
+  position: relative;
 }
 
 .subtitle {
-  color: #777;
-  font-size: 1rem;
-  margin-top: -0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #ff073a;
+  margin-top: 5px;
 }
 
+/* Tool Cards Layout */
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-top: 3rem;
 }
 
+/* Individual Section Cards */
 .card {
-  background: rgba(18, 20, 30, 0.95);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #000000aa;
-  border-left: 4px solid #333;
-  transition: transform 0.2s ease;
+  background-color: #111;
+  border: 2px solid #39ff14;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px #39ff14;
 }
-
-.card:hover {
-  transform: scale(1.01);
-}
-
-.card.red { border-color: #ff0055; }
-.card.blue { border-color: #00c8ff; }
-.card.intel { border-color: #ffff00; }
 
 .card h2 {
-  color: #ffffff;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #39ff14;
+  padding-bottom: 5px;
 }
 
 .tool-list {
@@ -68,41 +76,54 @@ body {
 }
 
 .tool-list li {
-  margin-bottom: 0.7rem;
+  margin: 10px 0;
+  font-size: 1.1rem;
 }
 
-.tool-list a {
-  color: #00fff7;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+/* Embedded Tools and Feeds */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+  box-shadow: 0 0 10px #333;
 }
 
-.tool-list a:hover {
-  color: #ff0055;
-  text-shadow: 0 0 6px #ff0055;
-}
-
+/* Footer with animated tagline */
 .footer {
-  margin-top: 4rem;
+  margin-top: 50px;
   text-align: center;
   font-size: 0.95rem;
-  color: #888;
-  border-top: 1px solid #222;
-  padding-top: 1.5rem;
+  color: #aaa;
 }
 
 .footer .tagline {
+  color: #ff073a;
   font-weight: bold;
-  color: #ff0044;
-  text-shadow: 0 0 6px #ff0044, 0 0 12px #c20066;
-  letter-spacing: 0.1rem;
+  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a;
+  animation: pulse 2.5s infinite alternate;
 }
 
+/* Glitch Animation */
+@keyframes glitch {
+  0%   { text-shadow: 2px 0 red, -2px 0 blue; transform: translate(0); }
+  20%  { text-shadow: -2px 0 red, 2px 0 blue; transform: translate(-1px, 1px); }
+  40%  { text-shadow: 2px 0 red, -2px 0 blue; transform: translate(1px, -1px); }
+  60%  { text-shadow: -2px 0 red, 2px 0 blue; transform: translate(0); }
+  80%  { text-shadow: 2px 0 red, -2px 0 blue; transform: translate(1px, 1px); }
+  100% { text-shadow: 0 0 2px #39ff14; transform: translate(0); }
+}
+
+/* Flicker Neon Effect */
 @keyframes flicker {
-  0% { opacity: 1; }
-  95% { opacity: 0.98; }
-  97% { opacity: 0.4; }
-  98% { opacity: 0.2; }
-  100% { opacity: 1; }
+  0%   { opacity: 1; }
+  50%  { opacity: 0.8; }
+  100% { opacity: 0.6; }
+}
+
+/* Pulse Tagline */
+@keyframes pulse {
+  0%   { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.05); }
 }
